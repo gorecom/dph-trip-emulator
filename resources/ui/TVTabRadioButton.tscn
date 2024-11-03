@@ -1,0 +1,37 @@
+[gd_scene load_steps=3 format=3 uid="uid://cbg84dae5kcmc"]
+
+[ext_resource type="Theme" uid="uid://c32invnm4vef" path="res://resources/themes/menu_theme.theme" id="1_l8g0p"]
+[ext_resource type="Script" path="res://scripts/ui/tv_tab_radio_button.gd" id="2_dxv2c"]
+
+[node name="TVTabRadioButton" type="Control"]
+custom_minimum_size = Vector2(120, 40)
+layout_mode = 3
+anchors_preset = 0
+offset_right = 120.0
+offset_bottom = 40.0
+size_flags_horizontal = 0
+theme = ExtResource("1_l8g0p")
+script = ExtResource("2_dxv2c")
+
+[node name="ChoosedBackgroundColorRect" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 10
+
+[node name="ButtonTextLabel" type="Label" parent="MarginContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 255, 1)
+text = "Text"
+uppercase = true
